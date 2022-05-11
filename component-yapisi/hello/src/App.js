@@ -1,12 +1,11 @@
 import './App.css';
 import Header from './components/Header'; //export edilen komponentin import edilmesi
-<<<<<<< HEAD
+import User from './components/User';
 
 const name = "Burak";
 const surname = "Çakır";
 const isLoggedIn = false;
-=======
-import User from './components/User';
+
 
 /* const name = "Burak";
 const surname = "Çakır";
@@ -26,20 +25,19 @@ const friends = [
     name: "burak"
   }
 ]
->>>>>>> edebd7a (propslar eklendi)
 
 function App() {
   return (
     <div>
       <Header /> {/* komponentin kullanılması */}
-<<<<<<< HEAD
+
       <p>
         lorem ipsum dolor sit amet
       </p>
       {/* <h3>{name} {surname}</h3> */} {/* değişken render edilmesi */}
       <h3>{isLoggedIn ? `benim adım ${name}, soyadım ${surname}` : ''}</h3> {/* değişken render edilmesi */}
       <h3>{!isLoggedIn && 'Lütfen giriş yapınız..'}</h3> {/* koşullu render işlemleri */}
-=======
+
       <User name={"Burak"} surname="Çakır" isLoggedIn={false} age={29} friends={friends} address={{ title: "Ataşehir", zip: 20220 }} /> {/* props kullanımı ve gönderilmesi işlemi */}
 
 
@@ -48,7 +46,7 @@ function App() {
       {/* <h3>{name} {surname}</h3> */} {/* değişken render edilmesi */}
       {/* <h3>{isLoggedIn ? `benim adım ${name}, soyadım ${surname}` : ''}</h3>  */}{/* değişken render edilmesi */}
       {/* <h3>{!isLoggedIn && 'Lütfen giriş yapınız..'}</h3> */} {/* koşullu render işlemleri */}
->>>>>>> edebd7a (propslar eklendi)
+
     </div>
   )
 }
