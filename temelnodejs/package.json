@@ -1,0 +1,18 @@
+{
+  "name": "temelnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-fetch": "^3.2.4",
+    "slugify": "^1.6.5"
+  }
+}
