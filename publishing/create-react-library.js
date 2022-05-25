@@ -1,4 +1,4 @@
-/*
+/*  npm i -g create-react-library
     -   reactjs kütüphanesi oluşturmaya yarar.
     -   unique bir kütüphane ismi olmalıdır.
     -   npm package name checker ile o ismin kullanılabilir olup olmadığı kontrol edilir.
