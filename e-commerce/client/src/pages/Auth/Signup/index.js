@@ -5,7 +5,7 @@ import validationSchema from './validations';
 import { fetchRegister } from '../../../api';
 import { useAuth } from '../../../contexts/AuthContext'
 
-const Signup = () => {
+const Signup = ({ history }) => {
 
   const { login } = useAuth();
 
@@ -20,6 +20,7 @@ const Signup = () => {
       try {
         const registerResponse = await fetchRegister({ email: values.email, password: values.password })
         login(registerResponse)
+        history.push("/profile")
       } catch (error) {
         console.log("ERROR register", error)
         bag.setErrors({ general: error.response.data.message })
