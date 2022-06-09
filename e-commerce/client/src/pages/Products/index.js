@@ -5,7 +5,7 @@ import { useInfiniteQuery } from 'react-query'
 import { fetchProductList } from '../../api';
 
 const Products = () => {
-    const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } = useInfiniteQuery('products', fetchProductList, {
+    const { data,error, fetchNextPage, hasNextPage, isFetchingNextPage, status } = useInfiniteQuery('products', fetchProductList, {
         getNextPageParam: (lastGroups, allGroups) => {
             const morePageExist = lastGroups?.length === 12;
             if (!morePageExist) {
@@ -15,12 +15,12 @@ const Products = () => {
         }
     })
     if (status === 'loading') return 'Yükleniyor...'
-    if (status === "error") return "Error var"
+    if (status === "error") return "Error var" + error.message
     return (
         <div>
             <Grid templateColumns='repeat(3, 1fr)' gap={4}>
                 {
-                    data && data.pages.map((group, i) => (
+                    data.pages && data.pages.map((group, i) => (
                         <React.Fragment key={i}>
                             {
                                 group.map((item, index) => (

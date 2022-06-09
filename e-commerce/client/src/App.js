@@ -7,6 +7,8 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Profile from './pages/Profile.js';
 import ProtectedRoutes from './pages/ProtectedRoutes';
+import Basket from './pages/Basket';
+import Error404 from './pages/Error404';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="/product/:product_id" component={ProductDetail} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
+          <Route path="/basket" component={Basket} />
           <ProtectedRoutes path="/profile" component={Profile} />
+          <Route path="*" component={Error404} />
         </Switch>
       </div>
     </div>

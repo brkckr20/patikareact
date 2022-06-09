@@ -23,7 +23,7 @@ const ProductDetail = () => {
         return <div>Ürün yüklenirken hata oluştu</div>
     }
 
-    const findBasketItems = items.find((item) => item._id === product_id)
+    const findBasketItem = items.find((item) => item._id === product_id)
 
     const images = data.photos.map((url) => ({ original: url }))
 
@@ -31,8 +31,8 @@ const ProductDetail = () => {
 
     return (
         <div>
-            <Button colorScheme={findBasketItems ? 'purple' : "pink"} onClick={() => addToBasket(data, findBasketItems)}>{
-                findBasketItems ? 'Remove Basket' : 'Add To Basket'
+            <Button colorScheme={findBasketItem ? 'purple' : "pink"} onClick={() => addToBasket(data, findBasketItem)}>{
+                findBasketItem ? 'Remove Basket' : 'Add To Basket'
             }</Button>
             <Text as="h2" fontSize="2xl">{data.title}</Text>
             <Text as="h2" fontSize="2xl">{moment(data.createdAt).format("DD/MM/YYYY")}</Text>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styles from './styles.module.css'
 import { Button } from '@chakra-ui/react'
+
 import { useAuth } from '../../contexts/AuthContext'
 import { useBasket } from '../../contexts/BasketContext';
 
@@ -37,13 +38,15 @@ const Navbar = () => {
                 {
                     loggedIn && (
                         <>
-                        {
-                            items.length > 0 && (
-                                <Button colorScheme="whatsapp" mr="1.5">
-                                    <Link to="basket">Basket ({items.length})</Link>
-                                </Button>
-                            )
-                        }
+                            {
+                                items.length > 0 && (
+
+                                    <Link to="/basket">
+                                        <Button colorScheme="whatsapp" mr="1.5">Basket ({items.length})</Button>
+                                    </Link>
+
+                                )
+                            }
                             <Link to="/profile">
                                 <Button colorScheme='facebook'>Profile</Button>
                             </Link>
