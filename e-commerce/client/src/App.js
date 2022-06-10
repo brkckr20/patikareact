@@ -9,6 +9,7 @@ import Profile from './pages/Profile.js';
 import ProtectedRoutes from './pages/ProtectedRoutes';
 import Basket from './pages/Basket';
 import Error404 from './pages/Error404';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/basket" component={Basket} />
           <ProtectedRoutes path="/profile" component={Profile} />
+          <ProtectedRoutes path="/admin" component={Admin} admin={true} />
           <Route path="*" component={Error404} />
         </Switch>
       </div>
