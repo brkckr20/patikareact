@@ -35,7 +35,7 @@ const Basket = () => {
         }
         await postOrder(input);
         emptyBasket();
-        onclose()
+        onClose()
         // console.log(response)
     }
 
