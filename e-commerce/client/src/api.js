@@ -2,7 +2,7 @@ import axios from 'axios';
 
 axios.interceptors.request.use(function (config) {
 
-    //istek yaptığımız end point bizim base endpointimiz ise header'a eklemeler yapabilmek için
+    //istek yaptığımız end point bizim base endpointimiz ise header'a eklemeler yapabilmek içinss
     const { origin } = new URL(config.url);
     const allowedOrigins = [process.env.REACT_APP_BASE_ENDPOINT] // hangi endpointlere istek yapılırken eklenmeli kısmı
     const token = localStorage.getItem("access-token");
